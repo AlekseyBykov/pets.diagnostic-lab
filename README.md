@@ -1,9 +1,9 @@
 # Java Diagnostic Lab
 
-This project is designed for practicing JVM diagnostics, including memory leaks, heap dumps, and garbage collection analysis.  
+This project is designed for practicing JVM diagnostics, including memory leaks, heap dumps, and garbage collection analysis. 
 It simulates common JVM problems to train working with tools like VisualVM, `jcmd`, and Eclipse MAT.
 
-## Project Structure
+### **Project Structure**
 
 ```
 src/main/java/dev/abykov/pets/
@@ -14,12 +14,10 @@ src/main/java/dev/abykov/pets/
 │ ├── gc
 │ │ └── GcPressureSimulator.java
 │ └── leak
-│ └── MemoryLeakSimulator.java
+│   └── MemoryLeakSimulator.java
 ```
 
-## Scenarios
-
-### Memory Leak (OutOfMemoryError)
+### **Memory Leak scenario (OutOfMemoryError)**
 
 Run:
 ```bash
@@ -45,7 +43,7 @@ Sample finding:
 OutOfMemoryError caused by ArrayList holding ~266MB of byte[] arrays.
 ```
 
-### Deadlock (Thread Dump)
+### **Deadlock scenario (Thread Dump)**
 
 Run:
 ```bash
@@ -58,7 +56,7 @@ Tools:
 - VisualVM: Take Thread Dump.
 - `jcmd <pid> Thread.print`: Analyze blocked threads and deadlock.
 
-###  GC Pressure
+###  **GC Pressure scenario**
 
 Run:
 ```bash
@@ -71,7 +69,7 @@ Expected:
 - High GC activity.
 - GC logs show Full GC frequency.
 
-### Diagnostics Artifacts
+### **Diagnostics Artifacts**
 ```
 diagnostics/
 ├── oommemory.hprof         # Heap dump after OOM
@@ -80,9 +78,12 @@ diagnostics/
 ├── memory-sampling.csv     # VisualVM sampling export
 ├── analysis-report.txt     # Manual summary
 ```
-###  Recommended Tools
+###  **Recommended Tools**
 
 - VisualVM
 - Eclipse MAT (Memory Analyzer Tool)
 -  jcmd, jstack
 - GC Easy for logs: https://gceasy.io/
+
+### **License** 
+MIT License
